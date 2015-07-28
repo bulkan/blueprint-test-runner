@@ -24,12 +24,11 @@
   },
   "main": "src/runner.js",
   "dependencies": {
-    "drakov": "^0.1.8",
+    "drakov": "^0.1.11",
     "phantomjs": "^1.9.17",
     "protractor": "^2.1.0",
-    "webdriver-manager": "^6.0.0"
+    "webdriver-manager": "^6.0.2"
   },
-  "private": true,
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-jshint": "^1.11.2",
