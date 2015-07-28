@@ -11,13 +11,13 @@
   ],
   "author": "Subin Varghese <svarghese@aconex.com>",
   "license": "MIT",
-  "homepage": "https://github.com/subinvarghesein/blueprint-test-runner",
+  "homepage": "https://github.com/Aconex/blueprint-test-runner",
   "repository": {
     "type": "git",
-    "url": "https://github.com/subinvarghesein/blueprint-test-runner.git"
+    "url": "https://github.com/Aconex/blueprint-test-runner.git"
   },
   "bugs": {
-    "url": "https://github.com/subinvarghesein/blueprint-test-runner/issues"
+    "url": "https://github.com/Aconex/blueprint-test-runner/issues"
   },
   "scripts": {
     "test": "gulp test"
