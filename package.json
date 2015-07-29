@@ -1,6 +1,6 @@
 {
   "name": "blueprint-test-runner",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Angular functional test runner using Drakov and Protractor",
   "keywords": [
     "angular",
