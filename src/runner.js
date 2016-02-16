@@ -1,6 +1,6 @@
 'use strict';
 
-var webDriverManager = require('webdriver-manager');
+var WebDriverManager = require('webdriver-manager');
 var drakov = require('drakov');
 
 var config = require('./config');
@@ -35,7 +35,7 @@ var runDrakov = function(cb) {
 };
 
 var updateAndRunWebdriver = function(cb) {
-	var wd = new webDriverManager();
+	var wd = new WebDriverManager();
 	var drivers = isChromeOnly ? ['chrome'] : ['standalone'];
 	if (drakovArgs) {
 		wd.install(drivers, runDrakov(cb));
