@@ -1,8 +1,11 @@
+sudo: required
 language: node_js
+dist: trusty
 node_js:
   - "0.10"
   - "0.12"
-  - "4.2.6"
+  - "4"
+  - "5"
 notifications:
   email:
     - svarghese@aconex.com
