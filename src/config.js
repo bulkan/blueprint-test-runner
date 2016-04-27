@@ -8,9 +8,9 @@ function stripJsExtension(pathToFile) {
 }
 
 var webdriverPath = require.resolve('webdriver-manager').replace('/lib/index.js', '');
-var phantomjsBinary = stripJsExtension(require.resolve('phantomjs'));
+var phantomjsBinary = stripJsExtension(require.resolve('phantomjs-prebuilt'));
 var chromeDriver = webdriverPath + '/selenium/chromedriver';
-var seleniumJar = webdriverPath + '/selenium/selenium-server-standalone-2.44.0.jar';
+var seleniumJar = webdriverPath + '/selenium/selenium-server-standalone-2.48.2.jar';
 
 var package = require('../package.json');
 
@@ -18,7 +18,7 @@ exports.description = package.description;
 exports.version = package.version;
 
 exports.paths = {
-	protractorLauncher: require('protractor/lib/launcher'),
+	protractorLauncher: require('protractor/built/launcher'),
 	selenium: seleniumJar
 };
 

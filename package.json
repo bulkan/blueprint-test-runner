@@ -27,7 +27,7 @@
     "drakov": "^0.2.2",
     "phantomjs-prebuilt": "^2.1.5",
     "protractor": "^3.1.1",
-    "webdriver-manager": "^8.0.0"
+    "webdriver-manager": "8.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
