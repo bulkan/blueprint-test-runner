@@ -18,7 +18,7 @@ exports.description = package.description;
 exports.version = package.version;
 
 exports.paths = {
-	protractorLauncher: require('protractor/built/launcher'),
+	protractorLauncher: require('protractor/lib/launcher'),
 	selenium: seleniumJar
 };
 
