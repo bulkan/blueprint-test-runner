@@ -1,14 +1,24 @@
 var gulp = require('gulp'),
-	mocha = require('gulp-mocha'),
-	gUtil = require('gulp-util'),
 	jshint = require('gulp-jshint');
 
-gulp.task('test:unit', function () {
-	return gulp.src('test/*Spec.js', {read: false})
-		.pipe(mocha({
-			reporter: 'spec'
-		}))
-		.on('error', gUtil.log);
+gulp.task('test:unit', function(done) {
+	var runner = require('./src/runner');
+
+	runner.start({
+		drakov: {
+			sourceFiles: 'test/blueprints/**/*.md',
+			serverPort: 3000,
+			staticPaths: [
+				'dist/rsrc'
+			]
+		},
+		protractor: {
+			framework: 'jasmine',
+			specs: 'test/specs/**/*Spec.js',
+			onComplete: function() {done();}
+		},
+		browserName: 'chrome'
+	});
 });
 gulp.task('test:lint', function() {
 	return gulp.src(['src/**/*.js', 'test/specs/**/*.js'])

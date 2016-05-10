@@ -9,10 +9,6 @@
 	"undef": true,
 	"boss": true,
 	"eqnull": true,
-
 	"node": true,
-	"globals": {
-		"describe": false,
-		"it": false
-	}
+	"jasmine": true
 }

@@ -19,21 +19,22 @@
   "bugs": {
     "url": "https://github.com/Aconex/blueprint-test-runner/issues"
   },
+  "engines": {
+    "node": ">= 4.0.0"
+  },
   "scripts": {
     "test": "gulp test"
   },
   "main": "src/runner.js",
   "dependencies": {
     "drakov": "^0.2.2",
-    "phantomjs-prebuilt": "^2.1.5",
-    "protractor": "~3.1.1",
-    "webdriver-manager": "8.0.0"
+    "extend": "^3.0.0",
+    "protractor": "^3.3.0",
+    "webdriver-manager": "^9.0.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",
     "gulp-jshint": "^2.0.0",
-    "gulp-mocha": "^2.1.3",
-    "gulp-util": "^3.0.6",
     "jshint": "^2.9.1",
     "jshint-stylish": "^2.0.1"
   }
