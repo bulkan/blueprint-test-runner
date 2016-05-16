@@ -28,7 +28,6 @@
   "main": "src/runner.js",
   "dependencies": {
     "drakov": "^0.2.2",
-    "extend": "^3.0.0",
     "protractor": "^3.3.0",
     "webdriver-manager": "^9.0.0"
   },

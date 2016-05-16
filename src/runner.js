@@ -1,5 +1,4 @@
 var WebDriverManager = require('webdriver-manager');
-var extend = require('extend');
 var drakov = require('drakov');
 var protractorLauncher = require('protractor/built/launcher');
 var config = require('./config');
@@ -34,7 +33,7 @@ module.exports = {
 			console.log('Running with', browserName.toUpperCase(), '\n');
 			var protractorProperties = config.properties.getProtractor(browserName);
 
-			extend(protractorProperties, protractorArgs);
+			Object.assign(protractorProperties, protractorArgs);
 			protractorLauncher.init(null, protractorProperties);
 		}
 	}
