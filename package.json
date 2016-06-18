@@ -23,13 +23,13 @@
     "node": ">= 4.0.0"
   },
   "scripts": {
-    "test": "gulp test"
+    "test": "gulp test",
+    "drakov": "drakov -f \"test\/blueprints\/**\/*.md\" -p 3000"
   },
   "main": "src/runner.js",
   "dependencies": {
-    "drakov": "^0.2.2",
-    "protractor": "^3.3.0",
-    "webdriver-manager": "^9.0.0"
+    "drakov": "^1.0.0",
+    "protractor": "^3.3.0"
   },
   "devDependencies": {
     "gulp": "^3.9.0",

@@ -1,10 +1,11 @@
-var WebDriverManager = require('webdriver-manager');
 var drakov = require('drakov');
 var protractorLauncher = require('protractor/built/launcher');
 var config = require('./config');
+var exec = require('child_process').exec;
 
 module.exports = {
 	start: function(opts, done) {
+		done = done || console.log;
 		console.log('\n', config.description, config.version, '\n');
 
 		var drakovArgs = opts.drakov;
@@ -14,15 +15,17 @@ module.exports = {
 		runWebdriver();
 
 		function runWebdriver() {
-			var wd = new WebDriverManager(config.paths.seleniumInstalls);
-			var drivers = [browserName, 'standalone'];
+			exec(__dirname + '/../node_modules/.bin/webdriver-manager update',
+				function(err, stdout, stderr) {
+					console.log(stdout);
+					console.log(stderr);
+					if (err) {
+						return done(err);
+					}
 
-			wd.install(drivers, function(err) {
-				if (err) {
-					return done(err);
+					runDrakov();
 				}
-				runDrakov();
-			});
+			);
 		}
 
 		function runDrakov() {
